@@ -2,21 +2,22 @@
 
 This project contains the code implementation for the [10up Front-end Engineering Technical Challenge](challenge.md).
 
-<details>
-    <summary>Table of Contents</summary>
-    1. [About the project](#about-the-project)  
-    2. [Build with](#build-with)  
-    3. [Getting Started](#getting-started)  
-        1. [Prerequisites](#prerequisites)  
-        2. [Run Locally](#run-locally)  
-    5. [Usage](#usage)  
-        1. [Demo](#demo)  
-    6. [Authors](#authors)  
-    7. [Color reference](#color-reference)  
-    8. [License](#license)  
-    9. [Acknowledgements](#acknowledgements)  
-    10. [About Me](#about-me)  
-</details>
+## Table of Contents
+
+1. [About the project](#about-the-project)  
+2. [Build with](#build-with)  
+3. [Getting Started](#getting-started)  
+    1. [Prerequisites](#prerequisites)  
+    2. [Run Locally](#run-locally)  
+5. [Usage](#usage)  
+    1. [Demo](#demo)  
+6. [Authors](#authors)  
+7. [Color reference](#color-reference)  
+8. [License](#license)  
+9. [Acknowledgements](#acknowledgements)  
+10. [About Me](#about-me)  
+
+----
 
 ## About the project <a name="about-the-project"></a>
 
@@ -30,16 +31,19 @@ Add build with technologies.
 
 Add Getting Started info.
 
-#### Run Locally
+### Prerequisites <a name="prerequisites"></a>
 
+Add prerequisites information.
+
+#### Run Locally <a name="run-locally"></a>
 Add information about how to run the project locally.
 
-Install dependencies
+1. Install dependencies
 
 ```bash
 ```
 
-Start the server
+2. Start the server
 
 ```bash
 ```
