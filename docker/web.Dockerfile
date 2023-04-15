@@ -25,9 +25,16 @@ EXPOSE 443
 RUN service apache2 stop
 
 RUN apt-get update
-RUN apt-get install -y libxml2-dev tzdata
+RUN apt-get install -y libxml2-dev tzdata zlib1g-dev libpng-dev imagemagick libmagickwand-dev
+RUN apt-get install -y libzip-dev zlib1g-dev libicu-dev g++
 
 # ENABLING MYSQLI EXT
 RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install gd
+RUN docker-php-ext-install exif
+RUN docker-php-ext-install zip
+RUN docker-php-ext-install intl
+
+RUN pecl install imagick && docker-php-ext-enable imagick
 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
