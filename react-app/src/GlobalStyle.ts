@@ -1,6 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
+import "./vendor/normalize.css";
 
 const GlobalStyle = createGlobalStyle`
+  :root {
+    font-size: 66.5%;
+    --content-text: rgba(8, 21, 35, 1);
+    --hero-eyebrow-text: rgba(1, 253, 171, 1);
+    --white-panel-eyebrow-text: rgba(2, 98, 240, 1);
+    --menu-footer-background-color: rgba(1, 2, 3, 1);
+    --hero-background-gradient-first: rgba(9, 21, 35, 1);
+    --hero-background-gradient-last: rgba(14, 37, 63, 1);
+    --hero-background: linear-gradient(-180deg, var(--hero-background-gradient-first), var(--hero-background-gradient-last));
+  }
+
   @font-face {
     font-family: 'Cousine';
     src: url('/fonts/Cousine-Bold.ttf') format('truetype');
@@ -31,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
   }
 `;
 
