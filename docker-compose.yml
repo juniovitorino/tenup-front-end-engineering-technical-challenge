@@ -3,7 +3,7 @@ version: "3.8"
 services:
   http:
     volumes:
-      - ./src:/var/www/apps/wpapp
+      - ./wordpress:/var/www/apps/wpapp
     build:
       context: "./docker"
       dockerfile: "web.Dockerfile"

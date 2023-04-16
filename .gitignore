@@ -208,8 +208,8 @@ box/themes/twenty*/
 .docker-sync/
 data/**/*
 
-src/wp-config-sample.php
-src/readme.html
-src/license.txt
+wordpress/wp-config-sample.php
+wordpress/readme.html
+wordpress/license.txt
 
 vendor/**

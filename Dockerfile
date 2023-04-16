@@ -14,7 +14,7 @@ RUN mkdir -p /var/log/apache2/wpapp
 RUN chown -R www-data:www-data /var/www/html/wpapp
 RUN chown -R www-data:www-data /var/log/apache2/wpapp
 
-COPY src/ /var/www/html/wpapp
+COPY wordpress/ /var/www/html/wpapp
 
 RUN a2ensite project
 EXPOSE 80
