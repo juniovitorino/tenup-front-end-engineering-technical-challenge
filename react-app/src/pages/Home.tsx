@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Header from "../components/Header";
 
 const pageTransitionVariants = {
   hidden: { opacity: 0 },
@@ -14,6 +15,7 @@ const Home = () => {
       initial="hidden"
       animate="visible"
       exit="exit">
+      <Header />
       <h1>Welcome to Front-end Engineering Technical Challenge</h1>
     </motion.div>
 
