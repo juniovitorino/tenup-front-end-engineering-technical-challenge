@@ -1,12 +1,6 @@
 const API_BASE_URL = 'https://10up-frontend-challenge.dev/api/v1';
 
-export interface Page {
-  id: number;
-  content: string;
-  fields: {
-    site_logo: string;
-  }
-}
+export interface HomePage {}
 
 const handleErrors = async (response: Response): Promise<Response> => {
   if (!response.ok) {
@@ -29,10 +23,10 @@ const fetchJSON = async (url: string): Promise<any> => {
   }
 };
 
-export const fetchPageByName = async (post_name: string): Promise<Page> => {
+export const fetchPageByName = async (post_name: string): Promise<HomePage> => {
   const url = `${API_BASE_URL}/pages/${post_name}`;
   const json = await fetchJSON(url);
-  const data: Page = json.data;
+  const data: HomePage = json.data;
   return data;
 };
 

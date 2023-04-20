@@ -17,8 +17,6 @@ const Home = () => {
   if (isLoading) return <p>Loading Home Page</p>;
   if (isError || !page) return <p>Error Home Page Data</p>;
 
-  const { site_logo:siteLogo } = page.fields;
-
   return (
     <motion.div
       key="home-page"
@@ -26,7 +24,7 @@ const Home = () => {
       initial="hidden"
       animate="visible"
       exit="exit">
-      <Header siteLogo={siteLogo} />
+      <Header />
     </motion.div>
 
   )
