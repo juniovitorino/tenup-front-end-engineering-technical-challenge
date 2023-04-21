@@ -1,5 +1,4 @@
 const API_BASE_URL = 'https://10up-frontend-challenge.dev/api/v1';
-
 export interface HomePage {}
 
 const handleErrors = async (response: Response): Promise<Response> => {
