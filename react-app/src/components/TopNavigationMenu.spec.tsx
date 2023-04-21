@@ -46,5 +46,4 @@ describe("Menu", () => {
     if (openCloseBtn) await fireEvent.click(openCloseBtn);
     expect(screen.queryByRole("navigation")).not.toBeInTheDocument()
   });
-
 })
