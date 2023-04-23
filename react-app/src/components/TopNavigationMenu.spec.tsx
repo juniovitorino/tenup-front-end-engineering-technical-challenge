@@ -35,7 +35,7 @@ describe("Menu", () => {
   })
 
   it('should have a open/close button', () => {
-    expect(screen.queryByTestId('open-close')).toBeInTheDocument();
+    expect(screen.queryByTestId('toggleMenuButton')).toBeInTheDocument();
   });
 
   it("should show menu when open/close button is clicked", async () => {

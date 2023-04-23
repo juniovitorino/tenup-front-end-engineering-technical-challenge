@@ -11,11 +11,12 @@ interface AnchorProps {
 
 const StyledAnchor = styled.a<AnchorProps>``;
 
-const AnchorLink: FC<PropsWithChildren & AnchorProps> = (props) => {
+const Button: FC<PropsWithChildren & AnchorProps> = (props) => {
   const { title, ariaLabel, target, href, children, isLink } = props;
   const ariaRole = isLink ? "link" : "button";
 
   if (!children || !href) return <></>;
+
   return <StyledAnchor
     data-testid="anchor"
     target={target}
@@ -25,4 +26,4 @@ const AnchorLink: FC<PropsWithChildren & AnchorProps> = (props) => {
     title={title}>{children}</StyledAnchor>
 }
 
-export default AnchorLink;
+export default Button;

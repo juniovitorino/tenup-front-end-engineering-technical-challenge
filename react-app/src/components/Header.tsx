@@ -3,6 +3,10 @@ import type { FC } from 'react';
 
 import styled from 'styled-components'
 import Logo from './CompanyLogo';
+import TopNavigationMenu from './TopNavigationMenu';
+import SectionTitle from './SectionTitle';
+import SectionSubtitle from './SectionSubtitle';
+import Button from './Button';
 import { isMobileDevice } from '../support/isMobileDevice';
 
 const StyledHeader = styled.header`
@@ -25,6 +29,11 @@ const Header: FC = () => {
   return (
     <StyledHeader data-testid="main-header">
       <Logo isMobile={isMobile} />
+      <TopNavigationMenu />
+      <SectionSubtitle>Who we are</SectionSubtitle>
+      <SectionTitle>Engage brand and increase viewability.</SectionTitle>
+      <Button href="https://example.com/download">Download Now</Button>
+      <Button href="https://example.com/lean-more" isLink={true}>Learn More</Button>
     </StyledHeader>
   )
 }

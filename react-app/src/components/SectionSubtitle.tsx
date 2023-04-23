@@ -5,7 +5,7 @@ interface SectionTitleProps { }
 
 const StyledSubtitle = styled.h3``
 
-const SectionTitle: FC<PropsWithChildren & SectionTitleProps> = ({ children }) => {
+const SectionSubtitle: FC<PropsWithChildren & SectionTitleProps> = ({ children }) => {
   return <StyledSubtitle>{children}</StyledSubtitle>;
 }
-export default SectionTitle;
+export default SectionSubtitle;
