@@ -9,7 +9,7 @@ const Logo: FC<LogoProps> = ({ isMobile }) => {
     <svg
       data-testid="companyLogo"
       xmlns="http://www.w3.org/2000/svg"
-      height="40"
+      height="46"
     >
       {!isMobile &&
         <path data-testid="companyName"

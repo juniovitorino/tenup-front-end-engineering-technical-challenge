@@ -5,8 +5,10 @@ interface ParagraphProps { }
 
 const StyledParagraph = styled.p`
   font-family: Montserrat, sans-serif;
+  font-size: 1.8rem;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 3.3rem;
+  letter-spacing: 0.039rem;
   color: white;
 `
 

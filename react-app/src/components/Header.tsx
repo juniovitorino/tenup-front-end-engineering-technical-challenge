@@ -11,47 +11,52 @@ import { isMobileDevice } from '../support/isMobileDevice';
 import Paragraph from './Paragraph';
 
 const StyledHeader = styled.header`
-  width: 100%;
-  min-height: 25vh;
   background-image: var(--hero-background);
+  min-height: 100vh;
 `
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
   margin: 0 auto;
-  background-image: url(/public/images/device-ipad.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center 20px;
-  overflow: hidden;
-  padding: 2rem 0;
+  padding: 5.3rem 8.5rem 2.5rem 11.4rem;
+  height: 100%;
+  /* background-image: url(/public/images/device-ipad.png); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center 20px; */
+  /* overflow: hidden; */
+
+  /* @media only screen and (min-width: 768px) { */
+  /*   background-size: contain; */
+  /* } */
 `
 
 const ContainerRow = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  --max-width: 68%;
-
   &.header-head {
-    padding: 0 2.8rem;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &.header-body {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    flex-direction: column;
+    max-width: 40%;
+    padding-left: 5.6rem;
+    margin-top: 12.6rem;
   }
 
-  &.header-body h3 {
-    align-self: start;
+  &.header-body h3,
+  &.header-body h2 {
+    margin: 0 0 1.3rem 0;
+  }
+
+  &.header-body p {
+    width: 35ch;
+    margin-top: 3rem;
   }
 
   &.header-footer {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    justify-content: space-around;
   }
 `
 

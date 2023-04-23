@@ -3,12 +3,19 @@ import { useQuery } from 'react-query';
 import Header from "../components/Header";
 import { fetchPageByName } from '../services/PageService';
 import type { HomePage } from '../services/PageService'
+import styled from "styled-components";
 
 const pageTransitionVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { duration: 0.5 } },
   exit: { opacity: 0, transition: { duration: 0.5 } },
 };
+
+const PageContainer = styled(motion.div)`
+  width: 100%;
+  display: grid;
+  margin: 0 auto;
+`;
 
 const Home = () => {
   const postName = 'home-page';
@@ -18,15 +25,14 @@ const Home = () => {
   if (isError || !page) return <p>Error Home Page Data</p>;
 
   return (
-    <motion.div
+    <PageContainer
       key="home-page"
       variants={pageTransitionVariants}
       initial="hidden"
       animate="visible"
       exit="exit">
       <Header />
-    </motion.div>
-
+    </PageContainer>
   )
 }
 
