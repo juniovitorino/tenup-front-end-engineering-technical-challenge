@@ -11,4 +11,5 @@ describe("Header", () => {
   it("should render a Section Subtitle", () => expect(screen.getByText(/Who we are/i)).toBeInTheDocument());
   it("should render a Learn More link", () => expect(screen.getByText(/Learn More/i)).toBeInTheDocument());
   it("should render a Download Now Button", () => expect(screen.getByText(/Download Now/i)).toBeInTheDocument());
+  it("should render a short description", () => expect(screen.getByText(/Elementum sagittis vitae et leo duis ut. Eu feugiat pretium nibh ipsum consequat./i)).toBeInTheDocument());
 });

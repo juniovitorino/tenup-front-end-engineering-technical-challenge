@@ -1,7 +1,14 @@
 import { useState } from "react";
 import type { FC } from 'react';
+import styled from "styled-components";
 
 interface TopNavigationMenuProps { }
+
+const StyledToggleButton = styled.button`
+  background: none;
+  border: none;
+  max-width: 40px;
+`
 
 const TopNavigationMenu: FC<TopNavigationMenuProps> = ({ }) => {
 
@@ -10,13 +17,13 @@ const TopNavigationMenu: FC<TopNavigationMenuProps> = ({ }) => {
 
   return (
     <div data-testid="menu">
-      <button data-testid="toggleMenuButton" onClick={toggleMenuVisibility}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none">
+      <StyledToggleButton data-testid="toggleMenuButton" onClick={toggleMenuVisibility}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="28">
           <rect width={26.783} height={3.652} fill="#fff" rx={1} />
           <rect width={36.522} height={3.652} y={12.174} fill="#fff" rx={1} />
           <rect width={24.348} height={3.652} y={24.348} fill="#fff" rx={1} />
         </svg>
-      </button>
+      </StyledToggleButton>
       {isMenuVisible &&
         <nav data-testid="top-navigation-menu">
           <ul>

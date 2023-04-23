@@ -18,6 +18,8 @@ const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Cousine-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
   }
 
   @font-face {
@@ -25,6 +27,8 @@ const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
   }
 
   @font-face {
@@ -32,6 +36,8 @@ const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Montserrat-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
   }
 
   @font-face {
@@ -39,6 +45,8 @@ const GlobalStyle = createGlobalStyle`
     src: url('/fonts/Montserrat-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
   }
 
   body {
