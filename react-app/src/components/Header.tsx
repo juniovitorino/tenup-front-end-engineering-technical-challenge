@@ -23,7 +23,7 @@ const Header: FC = () => {
   }, [responsiveLogoHandler]);
 
   return (
-    <StyledHeader>
+    <StyledHeader data-testid="main-header">
       <Logo isMobile={isMobile} />
     </StyledHeader>
   )
