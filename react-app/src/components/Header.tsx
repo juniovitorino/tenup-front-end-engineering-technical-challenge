@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import type { FC } from 'react';
 
 import styled from 'styled-components'
-import Logo from './Logo';
+import Logo from './CompanyLogo';
 import { isMobileDevice } from '../support/isMobileDevice';
 
 const StyledHeader = styled.header`

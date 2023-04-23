@@ -4,28 +4,28 @@ import { render, screen } from '@testing-library/react';
 import { isMobileDevice } from '../support/isMobileDevice';
 import { setMobileViewport } from '../support/setMobileViewport';
 
-import Logo from './Logo';
+import CompanyLogo from './CompanyLogo';
 
-describe("Logo", () => {
+describe("Company Logo", () => {
   let isMobile = false;
 
-  it('should render Logo component', () => {
-    render(<Logo isMobile={isMobile} />);
-    expect(screen.queryByTestId("logo")).toBeInTheDocument();
+  it('should render CompanyLogo component', () => {
+    render(<CompanyLogo isMobile={isMobile} />);
+    expect(screen.queryByTestId("companyLogo")).toBeInTheDocument();
   })
 
   it("should hide company name on mobile", () => {
     setMobileViewport();
     const isMobile = isMobileDevice()
 
-    render(<Logo isMobile={isMobile} />);
+    render(<CompanyLogo isMobile={isMobile} />);
     const companyName = screen.queryByTestId("companyName");
     expect(companyName).not.toBeInTheDocument();
   })
 
   it("should not hide company name on desktop", () => {
     const isMobile = !isMobileDevice();
-    render(<Logo isMobile={isMobile} />);
+    render(<CompanyLogo isMobile={isMobile} />);
 
     const companyName = screen.queryByTestId("companyName");
     expect(companyName).toBeInTheDocument();

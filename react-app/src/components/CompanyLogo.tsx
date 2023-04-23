@@ -7,7 +7,7 @@ interface LogoProps {
 const Logo: FC<LogoProps> = ({ isMobile }) => {
   return (
     <svg
-      data-testid="logo"
+      data-testid="companyLogo"
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
       height="100%"
