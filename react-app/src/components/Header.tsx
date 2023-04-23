@@ -1,13 +1,32 @@
-import styled from 'styled-components'
+import { useEffect, useState, useCallback } from 'react';
 import type { FC } from 'react';
 
-const HeaderComp = styled.header`
+import styled from 'styled-components'
+import Logo from './Logo';
+import { isMobileDevice } from '../support/isMobileDevice';
+
+const StyledHeader = styled.header`
+  width: 100%;
+  min-height: 25vh;
   background-image: var(--hero-background);
 `
 
-interface HeaderProps {}
+const Header: FC = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(isMobileDevice());
+  const responsiveLogoHandler = useCallback(() => setIsMobile(isMobileDevice()), [isMobile]);
 
-const Header: FC<HeaderProps> = ({}) => {
-    return <Header />;
+  useEffect(() => {
+    window.addEventListener('resize', responsiveLogoHandler);
+    return () => {
+      window.removeEventListener('resize', responsiveLogoHandler);
+    };
+  }, [responsiveLogoHandler]);
+
+  return (
+    <StyledHeader>
+      <Logo isMobile={isMobile} />
+    </StyledHeader>
+  )
 }
+
 export default Header;

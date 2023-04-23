@@ -10,7 +10,7 @@ describe("Logo", () => {
   let isMobile = false;
 
   it('should render Logo component', () => {
-    render(<Logo isVisible={isMobile} />);
+    render(<Logo isMobile={isMobile} />);
     expect(screen.queryByTestId("logo")).toBeInTheDocument();
   })
 
@@ -18,14 +18,14 @@ describe("Logo", () => {
     setMobileViewport();
     const isMobile = isMobileDevice()
 
-    render(<Logo isVisible={isMobile} />);
+    render(<Logo isMobile={isMobile} />);
     const companyName = screen.queryByTestId("companyName");
     expect(companyName).not.toBeInTheDocument();
   })
 
   it("should not hide company name on desktop", () => {
     const isMobile = !isMobileDevice();
-    render(<Logo isVisible={isMobile} />);
+    render(<Logo isMobile={isMobile} />);
 
     const companyName = screen.queryByTestId("companyName");
     expect(companyName).toBeInTheDocument();
