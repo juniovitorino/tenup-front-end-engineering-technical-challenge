@@ -12,25 +12,27 @@ import Paragraph from './Paragraph';
 
 const StyledHeader = styled.header`
   background-image: var(--hero-background);
-  min-height: 100vh;
+  min-height: 95.5vh;
+  overflow: hidden;
 `
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+  height: 100%;
+
   margin: 0 auto;
   padding: 5.3rem 8.5rem 2.5rem 11.4rem;
-  height: 100%;
-  /* background-image: url(/public/images/device-ipad.png); */
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
-  /* background-position: center 20px; */
-  /* overflow: hidden; */
 
-  /* @media only screen and (min-width: 768px) { */
-  /*   background-size: contain; */
-  /* } */
+  background-image: url(/public/images/device-ipad.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media only screen and (min-width: 768px) {
+    background-size: contain;
+    background-position: 90%;
+  }
 `
 
 const ContainerRow = styled.div`
@@ -57,6 +59,8 @@ const ContainerRow = styled.div`
   }
 
   &.header-footer {
+    padding-left: 5.2rem;
+    margin-top: 4.8rem;
   }
 `
 
