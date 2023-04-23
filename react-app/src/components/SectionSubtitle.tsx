@@ -3,9 +3,9 @@ import type { FC, PropsWithChildren } from 'react';
 
 interface SectionTitleProps { }
 
-const StyledSectionTitle = styled.h2``
+const StyledSubtitle = styled.h3``
 
 const SectionTitle: FC<PropsWithChildren & SectionTitleProps> = ({ children }) => {
-  return <StyledSectionTitle>{children}</StyledSectionTitle>;
+  return <StyledSubtitle>{children}</StyledSubtitle>;
 }
 export default SectionTitle;

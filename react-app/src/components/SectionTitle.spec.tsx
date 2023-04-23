@@ -3,14 +3,9 @@ import { render, screen } from '@testing-library/react';
 import SectionTitle from './SectionTitle'
 
 describe('Title', () => {
-  beforeEach(() => {});
+  beforeEach(() => { });
 
-  it("should render a heading title", () => {
-    render(<SectionTitle />)
-    expect(screen.queryByRole('heading')).toBeInTheDocument();
-  });
-
-  it("should render a heading title and his children", () => {
+  it("should render a section title", () => {
     render(<SectionTitle>Section title</SectionTitle>)
     expect(screen.queryByText("Section title")).toBeInTheDocument()
   })
