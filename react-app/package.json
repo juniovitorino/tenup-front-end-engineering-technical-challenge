@@ -7,9 +7,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "jest src --onlyChanged --passWithNoTests --coverage",
+    "test": "jest src --onlyChanged --passWithNoTests",
     "test:ci": "jest --ci",
-    "test:watch": "npm run test -- --onlyChanged --passWithNoTests --watch",
+    "test:watch": "npm run test -- --watch",
     "test:e2e": "playwright test"
   },
   "dependencies": {
