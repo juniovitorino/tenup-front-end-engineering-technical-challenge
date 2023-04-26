@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import type { FC, PropsWithChildren } from 'react';
 
-interface SectionTitleProps { }
+interface SectionTitleProps {
+  section?: string;
+}
 
-const StyledSectionTitle = styled.h2`
+const StyledSectionTitle = styled.h2<SectionTitleProps>`
   font-family: Montserrat, sans-serif;
-  color: white;
+  color: var(--${(p: SectionTitleProps) => p.section}-title-text);
   font-weight: bold;
   font-size: 62px;
   letter-spacing: 0.095rem;
@@ -13,7 +15,7 @@ const StyledSectionTitle = styled.h2`
   line-height: 6.76rem;
 `
 
-const SectionTitle: FC<PropsWithChildren & SectionTitleProps> = ({ children }) => {
-  return <StyledSectionTitle>{children}</StyledSectionTitle>;
+const SectionTitle: FC<PropsWithChildren & SectionTitleProps> = ({ children, section }) => {
+  return <StyledSectionTitle section={section}>{children}</StyledSectionTitle>;
 }
 export default SectionTitle;

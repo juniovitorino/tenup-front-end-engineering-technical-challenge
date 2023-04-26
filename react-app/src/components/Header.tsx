@@ -12,7 +12,7 @@ import Paragraph from './Paragraph';
 
 const StyledHeader = styled.header`
   background-image: var(--hero-background);
-  min-height: 95.5vh;
+  height: 840px;
   overflow: hidden;
 `
 
@@ -64,7 +64,11 @@ const ContainerRow = styled.div`
   }
 `
 
-const Header: FC = () => {
+interface HeaderProps {
+  section?: string;
+}
+
+const Header: FC<HeaderProps> = (props) => {
   const [isMobile, setIsMobile] = useState<boolean>(isMobileDevice());
   const responsiveLogoHandler = useCallback(() => setIsMobile(isMobileDevice()), [isMobile]);
 
@@ -83,10 +87,9 @@ const Header: FC = () => {
           <TopNavigationMenu />
         </ContainerRow>
         <ContainerRow className="header-body">
-          <SectionSubtitle>Who we are</SectionSubtitle>
-          <SectionTitle>Engage brand and increase viewability.</SectionTitle>
-          <Paragraph>Elementum sagittis vitae et leo duis ut. Eu
-            feugiat pretium nibh ipsum consequat.</Paragraph>
+          <SectionSubtitle {...props}>Who we are</SectionSubtitle>
+          <SectionTitle {...props}>Engage brand and increase viewability.</SectionTitle>
+          <Paragraph {...props}>Elementum sagittis vitae et leo duis ut. Eu feugiat pretium nibh ipsum consequat.</Paragraph>
         </ContainerRow>
         <ContainerRow className="header-footer">
           <Button href="https://example.com/download">Download Now</Button>

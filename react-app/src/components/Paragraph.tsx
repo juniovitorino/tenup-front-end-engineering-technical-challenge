@@ -1,18 +1,20 @@
 import styled from 'styled-components';
 import type { FC, PropsWithChildren } from 'react';
 
-interface ParagraphProps { }
+interface ParagraphProps {
+  section?: string;
+}
 
-const StyledParagraph = styled.p`
+const StyledParagraph = styled.p<ParagraphProps>`
+  color: var(--${(p: ParagraphProps) => p.section}-paragraph-text);
   font-family: Montserrat, sans-serif;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 3.3rem;
   letter-spacing: 0.039rem;
-  color: white;
 `
 
-const Paragraph: FC<PropsWithChildren & ParagraphProps> = ({ children }) => {
-  return <StyledParagraph data-testid="paragraph">{children}</StyledParagraph >
+const Paragraph: FC<PropsWithChildren & ParagraphProps> = ({ children, section }) => {
+  return <StyledParagraph data-testid="paragraph" section={section}>{children}</StyledParagraph >
 }
 export default Paragraph;

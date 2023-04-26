@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { useQuery } from 'react-query';
-import Header from "../components/Header";
 import { fetchPageByName } from '../services/PageService';
 import type { HomePage } from '../services/PageService'
 import styled from "styled-components";
+
+
+import Header from "../components/Header";
+import Content from "../components/Content";
 
 const pageTransitionVariants = {
   hidden: { opacity: 0 },
@@ -31,7 +34,8 @@ const Home = () => {
       initial="hidden"
       animate="visible"
       exit="exit">
-      <Header />
+      <Header section="hero" />
+      <Content section="content" />
     </PageContainer>
   )
 }

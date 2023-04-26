@@ -6,7 +6,10 @@ const GlobalStyle = createGlobalStyle`
     font-size: 66.5%;
     --content-text: rgba(8, 21, 35, 1);
     --hero-eyebrow-text: rgba(1, 253, 171, 1);
+    --hero-paragraph-text: rgba(255, 255, 255, 1);
+    --hero-title-text: rgba(255, 255, 255, 1);
     --white-panel-eyebrow-text: rgba(2, 98, 240, 1);
+    --content-eyebrow-text: var(--white-panel-eyebrow-text);
     --menu-footer-background-color: rgba(1, 2, 3, 1);
     --hero-background-gradient-first: rgba(9, 21, 35, 1);
     --hero-background-gradient-last: rgba(14, 37, 63, 1);
