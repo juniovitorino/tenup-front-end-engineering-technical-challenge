@@ -28,7 +28,7 @@ const Content: FC<ContentSectionProps> = (props) => {
       <StyledColumn>
         <img src="/public/images/device-mobile.png" />
       </StyledColumn>
-      <StyledColumn max-width="43%">
+      <StyledColumn max-width="41%">
         <SectionSubtitle {...props}>Eyebrow</SectionSubtitle>
         <SectionTitle {...props}>Generating relevant & engaging content</SectionTitle>
         <Paragraph {...props}>Non diam phasellus vestibulum lorem sed. Massa enim nec dui nunc mattis enim. Quisque egestas diam in arcu cursus euismod quis viverra. Eget arcu dictum varius duis at consecteur lorem donec massa.</Paragraph>
