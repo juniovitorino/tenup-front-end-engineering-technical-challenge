@@ -8,8 +8,8 @@ interface SectionTitleProps {
 const StyledSectionTitle = styled.h2<SectionTitleProps>`
   font-family: Montserrat, sans-serif;
   color: var(--${(p: SectionTitleProps) => p.section}-title-text);
+  font-size: var(--${(p: SectionTitleProps) => p.section}-title-font-size);
   font-weight: bold;
-  font-size: 62px;
   letter-spacing: 0.095rem;
   margin-top: 0;
   line-height: 6.76rem;
