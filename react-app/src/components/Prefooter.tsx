@@ -27,11 +27,15 @@ const StyledPrefooterContainer = styled.div`
 `
 
 const StyledContent = styled.div`
-  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 2rem;
+
+  @media only screen and (min-width: 768px) {
+    width: 40%;
+  }
 `
 
 const Prefooter: FC<PrefooterProps> = (props) => {

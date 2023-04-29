@@ -10,9 +10,9 @@ interface ContentSectionProps {
 
 const StyledContent = styled.section<ContentSectionProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   color: var(--${(p: ContentSectionProps) => p.section}-text);
-  padding: 4rem 5rem;
+  padding: 4rem 0;
 
   @media only screen and (min-width: 768px) {
     flex-direction: row;
@@ -24,16 +24,21 @@ const StyledContent = styled.section<ContentSectionProps>`
   }
 `
 const StyledImage = styled.img`
-  width: 100%;
+  width: 90%;
 `
 
 const StyledColumn = styled.div`
+  display: flex;
+  justify-content: center;
 
   @media only screen and (min-width: 768px) {
     max-width: 41%;
   }
+`
 
-  `
+const StyledContainer = styled.div`
+  padding: 0 3rem;
+`
 
 const Content: FC<ContentSectionProps> = (props) => {
   return (
@@ -42,9 +47,11 @@ const Content: FC<ContentSectionProps> = (props) => {
         <StyledImage src="/public/images/device-mobile.png" alt="Mobile Phone with lines of code" />
       </StyledColumn>
       <StyledColumn>
-        <SectionSubtitle {...props}>Eyebrow</SectionSubtitle>
-        <SectionTitle {...props}>Generating relevant & engaging content</SectionTitle>
-        <Paragraph {...props}>Non diam phasellus vestibulum lorem sed. Massa enim nec dui nunc mattis enim. Quisque egestas diam in arcu cursus euismod quis viverra. Eget arcu dictum varius duis at consecteur lorem donec massa.</Paragraph>
+        <StyledContainer>
+          <SectionSubtitle {...props}>Eyebrow</SectionSubtitle>
+          <SectionTitle {...props}>Generating relevant & engaging content</SectionTitle>
+          <Paragraph {...props}>Non diam phasellus vestibulum lorem sed. Massa enim nec dui nunc mattis enim. Quisque egestas diam in arcu cursus euismod quis viverra. Eget arcu dictum varius duis at consecteur lorem donec massa.</Paragraph>
+        </StyledContainer>
       </StyledColumn>
     </StyledContent>
   )

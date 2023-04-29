@@ -13,7 +13,7 @@ const StyledAnchor = styled.a<AnchorProps>`
   font-family: Montserrat, sans-serif;
   font-weight: 600;
   color: white;
-  font-size: clamp(1.6rem, 1.5257rem + 0.3048vw, 1.8rem);
+font-size: clamp(1.2rem, 0.9771rem + 0.9143vw, 1.8rem);
   text-align: center;
   letter-spacing: 0.04rem;
   padding: 1.8rem 2.8rem 1.8rem 2.6rem;
