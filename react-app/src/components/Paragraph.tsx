@@ -8,7 +8,7 @@ interface ParagraphProps {
 const StyledParagraph = styled.p<ParagraphProps>`
   color: var(--${(p: ParagraphProps) => p.section}-paragraph-text);
   font-family: Montserrat, sans-serif;
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 1.5257rem + 0.3048vw, 1.8rem);
   font-weight: 500;
   line-height: 3.3rem;
   letter-spacing: 0.039rem;
