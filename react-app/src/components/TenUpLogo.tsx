@@ -4,7 +4,12 @@ interface TenUpLogoProps { }
 
 const TenUpLogo: FC<PropsWithChildren & TenUpLogoProps> = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" data-testid="tenUpLogo">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      data-testid="tenUpLogo"
+      width="53"
+      height="64"
+    >
       <path
         fill="#E02E26"
         d="M13.698 1.037 0 7.922l2.717 3.316v31.52l10.98-11.231V1.037Z"

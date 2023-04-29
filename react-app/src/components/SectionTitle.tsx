@@ -18,4 +18,5 @@ const StyledSectionTitle = styled.h2<SectionTitleProps>`
 const SectionTitle: FC<PropsWithChildren & SectionTitleProps> = ({ children, section }) => {
   return <StyledSectionTitle section={section}>{children}</StyledSectionTitle>;
 }
+
 export default SectionTitle;

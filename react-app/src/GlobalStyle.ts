@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     --hero-background-gradient-first: rgba(9, 21, 35, 1);
     --hero-background-gradient-last: rgba(14, 37, 63, 1);
     --hero-background: linear-gradient(-180deg, var(--hero-background-gradient-first), var(--hero-background-gradient-last));
+    --prefooter-background: linear-gradient(130deg, rgba(255,255,255,0) 50%, rgba(14,37,63,1) 100%);
     --hero-title-font-size: 6rem;
     --content-title-font-size: 4.2rem;
   }

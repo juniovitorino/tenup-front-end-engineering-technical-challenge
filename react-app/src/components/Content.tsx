@@ -9,6 +9,8 @@ interface ContentSectionProps {
 }
 
 const StyledContent = styled.section<ContentSectionProps>`
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   align-items: center;

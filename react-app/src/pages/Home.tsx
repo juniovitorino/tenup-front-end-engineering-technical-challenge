@@ -7,6 +7,8 @@ import styled from "styled-components";
 
 import Header from "../components/Header";
 import Content from "../components/Content";
+import Prefooter from "../components/Prefooter";
+import Footer from "../components/Footer";
 
 const pageTransitionVariants = {
   hidden: { opacity: 0 },
@@ -36,6 +38,8 @@ const Home = () => {
       exit="exit">
       <Header section="hero" />
       <Content section="content" />
+      <Prefooter section="hero" />
+      <Footer />
     </PageContainer>
   )
 }
