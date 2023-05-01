@@ -103,6 +103,7 @@ const Header: FC<HeaderProps> = (props) => {
           <Logo isMobile={isMobile} />
           <TopNavigationMenu />
         </ContainerRow>
+        { /* Note: This 👇🏽 may be improved by using context API and component composition. I kept it simple but worth mentioning. */}
         <ContainerRow className="header-body">
           <SectionSubtitle {...props}>Who we are</SectionSubtitle>
           <SectionTitle {...props}>Engage brand and increase viewability.</SectionTitle>

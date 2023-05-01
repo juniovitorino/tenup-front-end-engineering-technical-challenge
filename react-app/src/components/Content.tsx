@@ -46,6 +46,7 @@ const Content: FC<ContentSectionProps> = (props) => {
       <StyledColumn>
         <StyledImage src="/public/images/device-mobile.png" alt="Mobile Phone with lines of code" />
       </StyledColumn>
+      { /* Note: This 👇🏽 may be improved by using context API and component composition. I kept it simple but worth mentioning. */}
       <StyledColumn>
         <StyledContainer>
           <SectionSubtitle {...props}>Eyebrow</SectionSubtitle>
