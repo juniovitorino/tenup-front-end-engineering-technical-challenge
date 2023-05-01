@@ -1,5 +1,5 @@
-import type { FC } from "react";
-import styled from 'styled-components';
+import type {FC} from "react";
+import styled from "styled-components";
 import Button from "./Button";
 import Paragraph from "./Paragraph";
 import SectionSubtitle from "./SectionSubtitle";
@@ -16,7 +16,7 @@ const StyledPrefooter = styled.section<PrefooterProps>`
   background-size: cover;
   background-position: center center;
   margin: 0 auto;
-`
+`;
 
 const StyledPrefooterContainer = styled.div`
   display: grid;
@@ -24,7 +24,7 @@ const StyledPrefooterContainer = styled.div`
   max-width: 1440px;
   margin: 0 auto;
   padding: 10rem 0;
-`
+`;
 
 const StyledContent = styled.div`
   display: flex;
@@ -36,21 +36,23 @@ const StyledContent = styled.div`
   @media only screen and (min-width: 768px) {
     width: 40%;
   }
-`
+`;
 
-const Prefooter: FC<PrefooterProps> = (props) => {
+const Prefooter: FC<PrefooterProps> = props => {
   return (
     <StyledPrefooter>
       <StyledPrefooterContainer>
         <StyledContent>
           <SectionSubtitle section={props.section}>Eyebrow</SectionSubtitle>
           <SectionTitle section={props.section}>Integrated tech</SectionTitle>
-          <Paragraph section={props.section}>Create custom solutions with the aim to improve overall outcomes</Paragraph>
+          <Paragraph section={props.section}>
+            Create custom solutions with the aim to improve overall outcomes
+          </Paragraph>
           <Button href="#">Contact Us</Button>
         </StyledContent>
       </StyledPrefooterContainer>
     </StyledPrefooter>
-  )
-}
+  );
+};
 
 export default Prefooter;

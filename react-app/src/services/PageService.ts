@@ -1,17 +1,16 @@
-const API_BASE_URL = 'https://10up-frontend-challenge.dev/api/v1';
-export interface HomePage {}
+const API_BASE_URL = "https://10up-frontend-challenge.dev/api/v1";
 
 const handleErrors = async (response: Response): Promise<Response> => {
   if (!response.ok) {
     const errorMessage = await response.text();
-    throw new Error(errorMessage || 'Error fetching data');
+    throw new Error(errorMessage || "Error fetching data");
   }
   return response;
 };
 
-const parseJSON = (response: Response): Promise<any> => response.json();
+const parseJSON = (response: Response): Promise<unknown> => response.json();
 
-const fetchJSON = async (url: string): Promise<any> => {
+const fetchJSON = async (url: string): Promise<unknown> => {
   try {
     const response = await fetch(url);
     const validResponse = await handleErrors(response);
@@ -28,4 +27,3 @@ export const fetchPageByName = async (post_name: string): Promise<HomePage> => {
   const data: HomePage = json.data;
   return data;
 };
-

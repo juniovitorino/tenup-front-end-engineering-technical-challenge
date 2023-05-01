@@ -1,15 +1,12 @@
-import type { FC, PropsWithChildren } from 'react';
+import type {FC, PropsWithChildren} from "react";
 
-interface TenUpLogoProps { }
-
-const TenUpLogo: FC<PropsWithChildren & TenUpLogoProps> = () => {
+const TenUpLogo: FC<PropsWithChildren> = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       data-testid="tenUpLogo"
       width="53"
-      height="64"
-    >
+      height="64">
       <path
         fill="#E02E26"
         d="M13.698 1.037 0 7.922l2.717 3.316v31.52l10.98-11.231V1.037Z"
@@ -23,7 +20,7 @@ const TenUpLogo: FC<PropsWithChildren & TenUpLogoProps> = () => {
         d="M35.307 0c-9.774 0-17.694 8.094-17.694 18.083 0 2.76.624 5.366 1.703 7.702l.183.196 10.933-11.173-3.437-3.512h14.96v15.29l-3.436-3.513-11.004 11.23a17.241 17.241 0 0 0 7.792 1.863C45.08 36.166 53 28.072 53 18.083 53 8.094 45.08 0 35.307 0Z"
       />
     </svg>
-  )
-}
+  );
+};
 
 export default TenUpLogo;

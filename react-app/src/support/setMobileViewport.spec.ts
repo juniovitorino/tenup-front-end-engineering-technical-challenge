@@ -1,5 +1,5 @@
-import { setMobileViewport } from "./setMobileViewport";
+import {setMobileViewport} from "./setMobileViewport";
 
-describe('Mobile Viewport', () => {
+describe("Mobile Viewport", () => {
   it.todo("should change the viewport to emulate mobile");
-})
+});

@@ -1,14 +1,14 @@
-import { useEffect, useState, useCallback } from 'react';
-import type { FC } from 'react';
+import {useEffect, useState, useCallback} from "react";
+import type {FC} from "react";
 
-import styled from 'styled-components'
-import Logo from './CompanyLogo';
-import TopNavigationMenu from './TopNavigationMenu';
-import SectionTitle from './SectionTitle';
-import SectionSubtitle from './SectionSubtitle';
-import Button from './Button';
-import { isMobileDevice } from '../support/isMobileDevice';
-import Paragraph from './Paragraph';
+import styled from "styled-components";
+import Logo from "./CompanyLogo";
+import TopNavigationMenu from "./TopNavigationMenu";
+import SectionTitle from "./SectionTitle";
+import SectionSubtitle from "./SectionSubtitle";
+import Button from "./Button";
+import {isMobileDevice} from "../support/isMobileDevice";
+import Paragraph from "./Paragraph";
 
 const StyledHeader = styled.header`
   background-image: var(--hero-background);
@@ -17,7 +17,7 @@ const StyledHeader = styled.header`
   @media only screen and (min-width: 768px) {
     height: 840px;
   }
-`
+`;
 
 const Container = styled.div`
   max-width: 1440px;
@@ -37,7 +37,7 @@ const Container = styled.div`
     background-size: contain;
     background-position: 90%;
   }
-`
+`;
 
 const ContainerRow = styled.div`
   padding: 2rem;
@@ -79,20 +79,23 @@ const ContainerRow = styled.div`
       flex-direction: row;
     }
   }
-`
+`;
 
 interface HeaderProps {
   section?: string;
 }
 
-const Header: FC<HeaderProps> = (props) => {
+const Header: FC<HeaderProps> = props => {
   const [isMobile, setIsMobile] = useState<boolean>(isMobileDevice());
-  const responsiveLogoHandler = useCallback(() => setIsMobile(isMobileDevice()), [isMobile]);
+  const responsiveLogoHandler = useCallback(
+    () => setIsMobile(isMobileDevice()),
+    [isMobile],
+  );
 
   useEffect(() => {
-    window.addEventListener('resize', responsiveLogoHandler);
+    window.addEventListener("resize", responsiveLogoHandler);
     return () => {
-      window.removeEventListener('resize', responsiveLogoHandler);
+      window.removeEventListener("resize", responsiveLogoHandler);
     };
   }, [responsiveLogoHandler]);
 
@@ -103,19 +106,26 @@ const Header: FC<HeaderProps> = (props) => {
           <Logo isMobile={isMobile} />
           <TopNavigationMenu />
         </ContainerRow>
-        { /* Note: This 👇🏽 may be improved by using context API and component composition. I kept it simple but worth mentioning. */}
+        {/* Note: This 👇🏽 may be improved by using context API and component composition. I kept it simple but worth mentioning. */}
         <ContainerRow className="header-body">
           <SectionSubtitle {...props}>Who we are</SectionSubtitle>
-          <SectionTitle {...props}>Engage brand and increase viewability.</SectionTitle>
-          <Paragraph {...props}>Elementum sagittis vitae et leo duis ut. Eu feugiat pretium nibh ipsum consequat.</Paragraph>
+          <SectionTitle {...props}>
+            Engage brand and increase viewability.
+          </SectionTitle>
+          <Paragraph {...props}>
+            Elementum sagittis vitae et leo duis ut. Eu feugiat pretium nibh
+            ipsum consequat.
+          </Paragraph>
         </ContainerRow>
         <ContainerRow className="header-footer">
           <Button href="https://example.com/download">Download Now</Button>
-          <Button href="https://example.com/lean-more" isLink={true}>Learn More</Button>
+          <Button href="https://example.com/lean-more" isLink={true}>
+            Learn More
+          </Button>
         </ContainerRow>
       </Container>
     </StyledHeader>
-  )
-}
+  );
+};
 
 export default Header;

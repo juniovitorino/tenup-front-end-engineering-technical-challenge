@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import {createGlobalStyle} from "styled-components";
 import "./vendor/normalize.css";
 
 const GlobalStyle = createGlobalStyle`

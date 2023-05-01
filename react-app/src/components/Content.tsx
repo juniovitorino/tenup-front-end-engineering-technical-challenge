@@ -1,11 +1,11 @@
-import type { FC } from "react";
-import styled from 'styled-components';
+import type {FC} from "react";
+import styled from "styled-components";
 import SectionTitle from "./SectionTitle";
 import SectionSubtitle from "./SectionSubtitle";
 import Paragraph from "./Paragraph";
 
 interface ContentSectionProps {
-  section?: string
+  section?: string;
 }
 
 const StyledContent = styled.section<ContentSectionProps>`
@@ -22,10 +22,10 @@ const StyledContent = styled.section<ContentSectionProps>`
     padding: 10rem 3rem;
     justify-content: space-around;
   }
-`
+`;
 const StyledImage = styled.img`
   width: 90%;
-`
+`;
 
 const StyledColumn = styled.div`
   display: flex;
@@ -34,28 +34,38 @@ const StyledColumn = styled.div`
   @media only screen and (min-width: 768px) {
     max-width: 41%;
   }
-`
+`;
 
 const StyledContainer = styled.div`
   padding: 0 3rem;
-`
+`;
 
-const Content: FC<ContentSectionProps> = (props) => {
+const Content: FC<ContentSectionProps> = props => {
   return (
     <StyledContent data-testid="content-section">
       <StyledColumn>
-        <StyledImage src="/public/images/device-mobile.png" alt="Mobile Phone with lines of code" />
+        <StyledImage
+          src="/public/images/device-mobile.png"
+          alt="Mobile Phone with lines of code"
+        />
       </StyledColumn>
-      { /* Note: This 👇🏽 may be improved by using context API and component composition. I kept it simple but worth mentioning. */}
+      {/* Note: This 👇🏽 may be improved by using context API and component composition. I kept it simple but worth mentioning. */}
       <StyledColumn>
         <StyledContainer>
           <SectionSubtitle {...props}>Eyebrow</SectionSubtitle>
-          <SectionTitle {...props}>Generating relevant & engaging content</SectionTitle>
-          <Paragraph {...props}>Non diam phasellus vestibulum lorem sed. Massa enim nec dui nunc mattis enim. Quisque egestas diam in arcu cursus euismod quis viverra. Eget arcu dictum varius duis at consecteur lorem donec massa.</Paragraph>
+          <SectionTitle {...props}>
+            Generating relevant & engaging content
+          </SectionTitle>
+          <Paragraph {...props}>
+            Non diam phasellus vestibulum lorem sed. Massa enim nec dui nunc
+            mattis enim. Quisque egestas diam in arcu cursus euismod quis
+            viverra. Eget arcu dictum varius duis at consecteur lorem donec
+            massa.
+          </Paragraph>
         </StyledContainer>
       </StyledColumn>
     </StyledContent>
-  )
-}
+  );
+};
 
 export default Content;
