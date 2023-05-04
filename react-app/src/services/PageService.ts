@@ -1,5 +1,16 @@
 const API_BASE_URL = "https://10up-frontend-challenge.dev/api/v1";
 
+export interface IEPage {
+  id: number;
+  post_name: string;
+  post_title: string;
+  post_content: string;
+}
+
+export interface IEHomePage {
+  data: IEPage;
+}
+
 const handleErrors = async (response: Response): Promise<Response> => {
   if (!response.ok) {
     const errorMessage = await response.text();
@@ -8,9 +19,9 @@ const handleErrors = async (response: Response): Promise<Response> => {
   return response;
 };
 
-const parseJSON = (response: Response): Promise<unknown> => response.json();
+const parseJSON = (response: Response): Promise<IEHomePage> => response.json();
 
-const fetchJSON = async (url: string): Promise<unknown> => {
+const fetchJSON = async (url: string): Promise<IEHomePage> => {
   try {
     const response = await fetch(url);
     const validResponse = await handleErrors(response);
@@ -21,9 +32,8 @@ const fetchJSON = async (url: string): Promise<unknown> => {
   }
 };
 
-export const fetchPageByName = async (post_name: string): Promise<HomePage> => {
+export const fetchPageByName = async (post_name: string): Promise<IEHomePage> => {
   const url = `${API_BASE_URL}/pages/${post_name}`;
   const json = await fetchJSON(url);
-  const data: HomePage = json.data;
-  return data;
+  return json;
 };

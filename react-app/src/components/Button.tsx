@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import type {FC, PropsWithChildren} from "react";
+import type { FC, PropsWithChildren } from "react";
 
 interface AnchorProps {
   title?: string;
@@ -42,7 +42,7 @@ const StyledAnchor = styled.a<AnchorProps>`
 `;
 
 const Button: FC<PropsWithChildren & AnchorProps> = props => {
-  const {title, ariaLabel, target, href, children, isLink} = props;
+  const { title, ariaLabel, target, href, children, isLink } = props;
   const ariaRole = isLink ? "link" : "button";
 
   if (!children || !href) return <></>;
