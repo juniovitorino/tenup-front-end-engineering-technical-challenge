@@ -21,7 +21,7 @@ This project contains the code implementation for the [10up Front-end Engineerin
 
 ## About the project <a name="about-the-project"></a>
 
-Add about the project, image or GIF.
+The progress is part of 10up screening process for senior front-end engineer.
 
 ## Build With <a name="build-with"></a>
 
@@ -33,28 +33,58 @@ Add about the project, image or GIF.
 
 ## Getting Started <a name="getting-started"></a>
 
-Add Getting Started info.
+To get started ensure that you have all the technologies above set in place in your local machine. The project 
+is enabled to use https by default. Docker already enable all certificates, requring only the installation of [mkcert](https://github.com/FiloSottile/mkcert).
+SSL is not mandatory in order to the application work.
 
 ### Prerequisites <a name="prerequisites"></a>
 
-Add prerequisites information.
+- Docker
+- PNPM
+- [mkcert](https://github.com/FiloSottile/mkcert)
 
 #### Run Locally <a name="run-locally"></a>
-Add information about how to run the project locally.
+
+Clone the repository and navigate to folder and:
 
 1. Install dependencies
 
 ```bash
+docker compose up
 ```
-
-2. Start the server
+2. Install React App depencencies
 
 ```bash
+cd react-app ; pnpm i
+```
+
+3. Start the server
+
+```bash
+pnpm dev
 ```
 
 ## Usage <a name="usage"></a>
 
-Add usage information.
+### Front-end
+Hit the address: https://10up-frontend-challenge.dev:5173 or http://localhost:5173
+
+## Backend (CMS)
+For access admin hit https://10up-frontend-challenge.dev/wp-admin/ with the credentials:
+
+Username: `admin`  
+Password: `10challengepass`  
+
+## Demo <a name="demo"></a>
+
+https://user-images.githubusercontent.com/22594/236174487-aaa1f3ad-e784-4771-86a6-c80d4f9db644.mov
+
+### Project scripts available
+<img width="592" alt="image" src="https://user-images.githubusercontent.com/22594/236172359-ea5fbde5-9995-41cf-8ea1-8eecd38f1fe4.png">
+
+### Test suite coverage
+
+<img width="942" alt="image" src="https://user-images.githubusercontent.com/22594/236173521-3b4cfaec-6df0-4f5e-ba46-f840b2228414.png">
 
 ## Code Authors <a name="authors"></a>
 - [@juniovitorino](https://www.github.com/juniovitorino)
@@ -78,4 +108,19 @@ Add Acknowledgements.
 
 ## 🚀 About Me <a name="about-me"></a>
 
-Add about me information.
+With a diverse and extensive 20-year career as a Senior Software Engineer, I have honed my engineering expertise to create seamless, responsive, and user-centric web applications. My strong foundation in Google Cloud services and CI/CD best practices have enabled me to optimize development workflows, ensuring consistent, high-quality deliverables for clients and organizations.
+
+I have worked on numerous projects throughout my career, collaborating with cross-functional teams to create innovative and scalable solutions. My in-depth knowledge of web technologies and commitment to staying current with the latest industry trends make me a valuable asset to any team.
+
+Key skills & expertise:
+
+- Expert in Node, Typescript, React and Ruby on Rails;
+- Strong knowledge of Google Cloud services and infrastructure;
+- Proficient in Continuous Integration and Continuous Deployment (CI/CD) methodologies;
+- Excellent collaboration and communication skills;
+- Adept at problem-solving, debugging, and optimization;
+- Passion for learning and adapting to new technologies and tools;
+
+As a seasoned Senior Software Engineer, I am committed to leveraging my diverse skill set and experience to drive technology projects to successful completion. I am always eager to tackle new challenges, collaborate with teams, and contribute to the ever-evolving world of software engineering.
+
+For more please visit my [LinkedIn](https://www.linkedin.com/in/juniovitorino).
