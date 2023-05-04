@@ -1,7 +1,7 @@
-import {motion} from "framer-motion";
-import {useQuery} from "react-query";
-import {fetchPageByName} from "../services/PageService";
-import type {HomePage} from "../services/PageService";
+import { motion } from "framer-motion";
+import { useQuery } from "react-query";
+import { fetchPageByName } from "../services/PageService";
+import type { IEHomePage } from "../services/PageService";
 import styled from "styled-components";
 
 import Header from "../components/Header";
@@ -10,9 +10,9 @@ import Prefooter from "../components/Prefooter";
 import Footer from "../components/Footer";
 
 const pageTransitionVariants = {
-  hidden: {opacity: 0},
-  visible: {opacity: 1, transition: {duration: 0.5}},
-  exit: {opacity: 0, transition: {duration: 0.5}},
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
 };
 
 const PageContainer = styled(motion.div)`
@@ -27,7 +27,7 @@ const Home = () => {
     data: page,
     isLoading,
     isError,
-  } = useQuery<HomePage, Error>(["page", postName], () =>
+  } = useQuery<IEHomePage, Error>(["page", postName], () =>
     fetchPageByName(postName),
   );
 
